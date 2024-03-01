@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav class="nav">
+            <a href="#" class="nav_logo">Webby</a>
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="#" class="nav_link">Home</a>
+                    <a href="#" class="nav_link">Products</a>
+                    <a href="#" class="nav_link">Services</a>
+                    <a href="#" class="nav_link">contact</a>
+                </li>
+            </ul>
+            <button class="button" type="button" id="openForm">Login</button>
+        </nav>
+    </header>
+    <!-- home  -->
+    <section class="home">
+
+        <div class="form-container">
+            <i class="uil uil-times form-close"></i>
+        <!-- login form  -->
+            <div class="form-login form">
+                <form action="#">
+                    <h2>Login</h2>
+                    <div class="input-box">
+                        <input type="email" name="email"  placeholder="Enter email" required>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password"  placeholder="Enter password" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="option-check">
+                        <span class="checkbox">
+                            <input type="checkbox" name="check" id="check">
+                            <label for="check">Remember me</label>
+                        </span>
+                        <a href="#" class="forgot">Forgot Password</a>
+                    </div>
+                    <button class="button" type="button">Login Now</button>
+                    <div class="login-signup">
+                        New to webby? <a href="#" id="signup">Create Account</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- signup form  -->
+            <div class="form-signup form">
+                <form action="#">
+                    <h2>SignUp</h2>
+                    <div class="input-box">
+                        <input type="email" name="email"  placeholder="Enter email" required>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password"  placeholder="Create password" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="confpassword"  placeholder="Confirm password" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <button class="button" type="button">SignUp Now</button>
+                    <div class="login-signup">
+                        Already hava a Webby Account? <a href="#" id="login">Login </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

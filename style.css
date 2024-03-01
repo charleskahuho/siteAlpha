@@ -1,0 +1,192 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+a{
+    text-decoration: none;
+    /* color: blue; */
+}
+.nav_link,
+.nav_logo,
+button{
+    color: #fff;
+}
+button{
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+}
+button:active{
+    transform: scale(0.98);
+}
+header{
+    height: 80px;
+    /* background-color: grey; */
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    padding: 0 20px;
+}
+nav, .nav_item{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.nav_item{
+    column-gap: 25px;
+}
+.nav_logo{
+    font-size: 30px;
+}
+.nav_link:hover{
+    color: #d9d9d9;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url("./cuby.jpg.crdownload");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.home::before{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.home .show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+.form-container{
+    position: absolute;
+    top: 50%;
+    max-width: 320px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+}
+.home.show .form-container{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.form-close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: rgb(39, 35, 35);
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.form-container h2{
+    font-size: 22px;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+}
+.input-box input{
+    height: 100%;
+    padding: 0 30px;
+    color: #333;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+.input-box input:focus{
+    border-color: #7d2ea8;
+}
+.input-box i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.input-box I.password,
+.input-box i.email{
+    left: 0;
+    color: #707070;
+}
+.input-box I.pw_hide{
+    right: 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+.input-box:has(input:focus)  i.email,
+.input-box:has(input:focus) i.pw_hide{
+    color: #7d2ea8;
+}
+.option-check{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkbox{
+    display: flex;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.form-container a{
+    font-size: 12px;
+    color: #7d2ea8;
+}
+.form-container a:hover{
+    text-decoration: underline;
+}
+.form-container .button{
+    background-color: #7d2ea8;
+    margin-top: 14px;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 10px;
+}
+.login-signup{
+    font-size: 12px;
+    margin-top: 14px;
+    text-align: center;
+}
+.form-signup{
+    display: none;
+}
+.form-container.active .form-signup{
+    display: block;
+}
+.form-container.active .form-login{
+    display: none;
+}
